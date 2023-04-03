@@ -1,0 +1,14 @@
+
+runtime: nodejs
+env: flex
+service: my-react-app
+handlers:
+  - url: /.*
+    static_files: build/index.html
+    upload: build/index.html
+  - url: /
+    static_dir: build
+
+env_variables:
+  # Your other environment variables...
+  REACT_APP_API_BASE_URL: 'https://example.com/api'
